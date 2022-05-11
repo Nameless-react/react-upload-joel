@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  padding: 20px 10px; 
+  gap: 20px;
+  list-style: none;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.nav li a:hover {
+  color: #00c
+}
+
+
+.posts {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.post {
+  cursor: pointer;
+  padding: 30px 10px;
+  background: #eee;
+  display: flex;
+  min-height: 250px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.hover-options {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.post:hover .hover-options {
+  background: #000;
+  opacity: .57;
+}
+
+.hover-options svg {
+  opacity: 0;
+}
+
+.post:hover .hover-options svg {
+  font-size: 2.2rem;
+  padding: .16em;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  color: #fff;
+  opacity: 1;
+}
+
+.hover-options svg:first-child:hover {
+  color: #2727ff;
+  outline-color: #2727ff;
+}
+
+.hover-options svg:nth-child(2):hover {
+  color: #ff2c2c;
+  outline-color:#ff2c2c;
+}
+
+.post img {
+  width: 50%;
+}
+
+.post h3 {
+  text-align: center;
+}
+
+.content p {
+  word-break: break-all;
+}
+
+.addPost {
+  font-size: 1rem;
+  margin-left: 95%;
+  margin-top: 20px;
+  height: 2.4%;
+  width: 2.4%;
+  padding: .3em;
+  color: #000;
+  outline: 2px solid #000;
+  border-radius: 50%;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.addPost:hover {
+  cursor: pointer;
+  background: #ddd;
+}
+
+.addPost-empty {
+  font-size: 2rem;
+  color: #000;
+}
+
+
+.form {
+  background: #eee;
+  margin: 3rem auto;
+  width: 50%;
+  padding: 1.8em 1.4em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-1 {
+  display: grid;
+  grid-auto-rows: repeat(6, 1fr);
+  grid-auto-columns: 100%;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.form h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  place-self: center;
+}
+
+.form button {
+  border: none;
+  background: #00c;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: .25em .55em;
+  margin-bottom: .5rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #000;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.errors {
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: -10px 0;
+  place-self: center;
+  align-self: flex-start;
+}
+
+.textarea,
+.input  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+
+.form input:first-child,
+.form .textarea textarea {
+  width: 100%;
+  padding: .7em;
+  background: #ddd;
+  border: none;
+  outline: none;
+}
+
+.file {
+  width:calc(60% + 5px);
+  margin: 0 auto;
+  padding: .6em .4em;
+  background: #ddd;
+  text-align: center;
+  font-size: 1rem;
+}
+.empty {
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
+  padding: 5rem 20px;
+  margin-top: 15rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background: #eee;
+}
+
+.empty:hover {
+  background: #ddd;
+}
+
+.empty h2 {
+  font-size: 2rem;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.spinner {
+  animation: spinn 1s linear infinite; 
+}
+
+
+@keyframes spinn {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
